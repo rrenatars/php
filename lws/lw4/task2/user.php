@@ -1,30 +1,5 @@
 <?php
-define('jsonParams', 'params.json');
-/**
- * @return array{dsn:string,username:string,password:string}
- */
-function getConnectionParams(): array
-{
-    // Читает файл конфигурации и возвращает ассоциативный массив
-    //  с параметрами подключения
-    $json = file_get_contents(jsonParams);
-    $users = json_decode($json, true);
-    foreach ($users as $fields) {
-        $params = $fields;
-    }
-    return $params;
-}
-
-function connectDatabase(): PDO
-{
-    // Создаёт объект PDO, представляющий подключение к MySQL.
-    // Использует фиксированные параметры dsn, username, password.
-    $params = getConnectionParams();
-    $dsn = $params['dsn'];
-    $user = $params['user'];
-    $password = $params['password'];
-    return new PDO($dsn, $user, $password);
-}
+include "../../../lib/database.php";
 
 function saveUserToDatabase(PDO $connection, array $userParams): int
 {

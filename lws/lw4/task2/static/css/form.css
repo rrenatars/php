@@ -1,0 +1,18 @@
+.data
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data__input
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+label
+{
+    display: block;
+}
