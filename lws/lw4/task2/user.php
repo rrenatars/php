@@ -1,5 +1,5 @@
 <?php
-include "../../../lib/database.php";
+require_once "../../../lib/database.php";
 
 function saveUserToDatabase(PDO $connection, array $userParams): int
 {
