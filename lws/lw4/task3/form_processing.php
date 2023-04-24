@@ -82,14 +82,14 @@ if ($_POST)
     if (isset($_POST[lastName]) && isset($_POST[firstName]) && isset($_POST[gender]) && isset($_POST[birthDate]) && isset($_POST [email]))
     {
         $userParams = [
-            'last_name' => $_POST['last_name'],
-            'first_name' => $_POST['first_name'],
-            'middle_name' => $_POST['middle_name'],
-            'gender' => $_POST['gender'],
-            'birth_date' => $_POST['birth_date'],
-            'email' => $_POST['email'],
-            'phone' => $_POST['phone'],
-            'avatar_path' => $_POST['avatar_path']
+            'last_name' => $_POST[lastName],
+            'first_name' => $_POST[firstName],
+            'middle_name' => $_POST[middleName],
+            'gender' => $_POST[gender],
+            'birth_date' => $_POST[birthDate],
+            'email' => $_POST[email],
+            'phone' => $_POST[phone],
+            'avatar_path' => $_POST[avatarPath]
         ];
         $connection = connectDatabase();
         $userId = saveUserToDatabase($connection, $userParams);
