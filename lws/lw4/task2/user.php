@@ -53,6 +53,7 @@ if (isset($_POST[lastName]) && isset($_POST[firstName]) && isset($_POST[gender])
         'phone' => $_POST[phone],
         'avatar_path' => $_POST[avatarPath]
     ];
+    var_dump($userParams);
     $connection = connectDatabase();
     saveUserToDatabase($connection, $userParams);
     echo 'Вы успешно зарегистрировались';

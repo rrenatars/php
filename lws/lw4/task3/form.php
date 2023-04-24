@@ -8,7 +8,7 @@
     <body>
         <div class="data">
             <h1>Форма ввода данных</h1>
-            <form action="add_user.php" method="POST">
+            <form action="form_processing.php" method="POST">
                 <label >Фамилия: <input class="data__input" type="text" name="last_name" required="required" ></label>
                 <label>Имя: <input class="data__input" type="text" name="first_name" required="required"></label>
                 <label>Отчество: <input class="data__input" type="text" name="middle_name"></label>
