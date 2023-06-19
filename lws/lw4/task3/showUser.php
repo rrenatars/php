@@ -1,11 +1,12 @@
 <?php
-require_once __DIR__ . '/form_processing.php';
+require_once __DIR__ . '/addUser.php';
 
 $userId = (int)$_GET['user_id'];
 if (!$userId)
 {
     echo "ID пользователя не указан";
-} else {
+} else
+{
     $connection = connectDatabase();
     $user = findUserInDatabase($connection, $userId);
     if (!$user)
